@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Device Verification</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:20px;background:#0d1424;color:white;font-family:Arial,sans-serif}
+.card{width:100%;max-width:380px;background:#182338;padding:28px 22px;border-radius:20px;text-align:center;border:1px solid #34415a}
+.icon{font-size:48px}
+h2{margin:15px 0 8px}
+p{color:#b8c4d9;line-height:1.6}
+button{width:100%;padding:14px;border:0;border-radius:10px;background:#2688ff;color:white;font-size:16px;font-weight:bold;margin-top:15px;cursor:pointer}
+#result{margin-top:20px;overflow-wrap:anywhere}
+.small{font-size:12px;color:#8e9bb1}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="icon">🛡️</div>
+<h2>Device Verification</h2>
+<p>Verify your Telegram account to continue.</p>
+<button id="verify">📱 Verify Device</button>
+<div id="result" aria-live="polite"></div>
+<p class="small">Secure verification for High Earn Cash</p>
+</div>
+<script>
+const params = new URLSearchParams(location.search);
+const referral = params.get("ref");
+document.getElementById("verify").addEventListener("click",()=>{
+  document.getElementById("result").textContent =
+    "⚠️ Demo only: Telegram account and device have not been verified yet.";
+});
+</script>
+</body>
+  </html>
